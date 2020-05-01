@@ -1,25 +1,35 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import "../components/kaart.css"
 
 const Kaart = ({ titel, afbeelding, knopTekst, knopURL }) => {
   const getCardImage = () => {
     if (afbeelding === "presentatrice") {
       return (
-        <div className="text-center ">
-          <Img fixed={data.presentatriceImage.childImageSharp.fixed} />
+        <div className="text-center">
+          <Img
+            className="presentatrice"
+            fixed={data.presentatriceImage.childImageSharp.fixed}
+          />
         </div>
       )
     } else if (afbeelding === "ambassadrice") {
       return (
-        <div className="text-center ">
-          <Img fixed={data.ambassadriceImage.childImageSharp.fixed} />
+        <div className="text-center">
+          <Img
+            className="ambassadrice"
+            fixed={data.ambassadriceImage.childImageSharp.fixed}
+          />
         </div>
       )
     } else if (afbeelding === "contact") {
       return (
-        <div className="text-center ">
-          <Img fixed={data.contactImage.childImageSharp.fixed} />
+        <div className="text-center">
+          <Img
+            className="contact"
+            fixed={data.contactImage.childImageSharp.fixed}
+          />
         </div>
       )
     }
@@ -54,12 +64,12 @@ const Kaart = ({ titel, afbeelding, knopTekst, knopURL }) => {
   `)
   return (
     <div className="col-span-1 rounded overflow-hidden shadow-lg">
-      <p className="titel text-center p-5 text-sm">{titel}</p>
+      <p className="titel font-bold text-center p-5 text-sm">{titel}</p>
       {getCardImage({ data, afbeelding })}
       <p className="py-5 mx-auto text-center">
         <a
           href="/"
-          className="text-sm bg-transparent hover:bg-black text-black  hover:text-white py-2 px-4 border border-black hover:border-transparent"
+          className="kaart-button text-sm font-bold bg-transparent hover:bg-black text-black  hover:text-white py-2 border border-black hover:border-transparent"
         >
           {knopTekst}
         </a>
