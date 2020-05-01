@@ -12,7 +12,19 @@ const IndexPage = () => (
     <p>Welcome to your new Gatsby site.</p>
     <div style={{ maxWidth: `200px`, marginBottom: `1.45rem` }}>
       <Image />
-      <Kaart titel="Presentatrice" afbeelding="presentatrice" />
+    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-5 ">
+      <Kaart
+        titel="Presentatrice"
+        afbeelding="presentatrice"
+        knopTekst="Lees meer"
+      />
+      <Kaart
+        titel="Ambassadrice"
+        afbeelding="ambassadrice"
+        knopTekst="Lees meer"
+      />
+      <Kaart titel="Contact" afbeelding="contact" knopTekst="Lees meer" />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>

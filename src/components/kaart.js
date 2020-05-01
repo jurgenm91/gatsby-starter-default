@@ -1,56 +1,69 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-const Kaart = ({ titel, afbeelding, knopTekst, knopTitel }) => {
+
+const Kaart = ({ titel, afbeelding, knopTekst, knopURL }) => {
   const getCardImage = () => {
-    if (afbeelding == "presentatrice") {
-      return <Img fluid={data.presentatriceImage.childImageSharp.fluid} />
-    } else {
-      return <Img fluid={data.contactImage.childImageSharp.fluid} />
+    if (afbeelding === "presentatrice") {
+      return (
+        <div className="text-center ">
+          <Img fixed={data.presentatriceImage.childImageSharp.fixed} />
+        </div>
+      )
+    } else if (afbeelding === "ambassadrice") {
+      return (
+        <div className="text-center ">
+          <Img fixed={data.ambassadriceImage.childImageSharp.fixed} />
+        </div>
+      )
+    } else if (afbeelding === "contact") {
+      return (
+        <div className="text-center ">
+          <Img fixed={data.contactImage.childImageSharp.fixed} />
+        </div>
+      )
     }
   }
 
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "dina-home.jpg" }) {
+      presentatriceImage: file(relativePath: { eq: "dina-presentatrice.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 200, height: 200, quality: 90) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
 
-      presentatriceImage: file(relativePath: { eq: "dina-home.jpg" }) {
+      ambassadriceImage: file(relativePath: { eq: "dina-ambassadrice.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 200, height: 200, quality: 90) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
 
-      ambassadriceImage: file(relativePath: { eq: "dina-home.jpg" }) {
+      contactImage: file(relativePath: { eq: "dina-contact.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      contactImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 200, height: 200, quality: 90) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `)
   return (
-    <div id="kaart" style={{ width: "400px" }}>
-      <p className="titel" style={{ textAlign: "center" }}>
-        {titel}
-      </p>
+    <div className="col-span-1 rounded overflow-hidden shadow-lg">
+      <p className="titel text-center p-5 text-sm">{titel}</p>
       {getCardImage({ data, afbeelding })}
+      <p className="py-5 mx-auto text-center">
+        <a
+          href="/"
+          className="text-sm bg-transparent hover:bg-black text-black  hover:text-white py-2 px-4 border border-black hover:border-transparent"
+        >
+          {knopTekst}
+        </a>
+      </p>
     </div>
   )
 }
