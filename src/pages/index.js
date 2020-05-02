@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import Kaart from "../components/kaart"
+import MenuKaarten from "../components/menuKaarten"
 
 const IndexPage = () => (
   <Layout>
@@ -47,19 +47,7 @@ const IndexPage = () => (
         </p>
       </div>
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-5  gap-5 ">
-      <Kaart
-        titel="Presentatrice"
-        afbeelding="presentatrice"
-        knopTekst="Lees meer"
-      />
-      <Kaart
-        titel="Ambassadrice"
-        afbeelding="ambassadrice"
-        knopTekst="Lees meer"
-      />
-      <Kaart titel="Contact" afbeelding="contact" knopTekst="Lees meer" />
-    </div>
+    <MenuKaarten />
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
