@@ -63,13 +63,13 @@ const Kaart = ({ titel, afbeelding, knopTekst, knopURL }) => {
     }
   `)
   return (
-    <div className="col-span-1 rounded overflow-hidden shadow-lg">
+    <div className="col-span-1 rounded overflow-hidden shadow-md">
       <p className="titel font-bold text-center p-5 text-sm">{titel}</p>
       {getCardImage({ data, afbeelding })}
       <p className="py-5 mx-auto text-center">
         <a
           href="/"
-          className="kaart-button text-sm font-bold bg-transparent hover:bg-black text-black  hover:text-white py-2 border border-black hover:border-transparent"
+          className="kaart-button text-sm font-normal bg-transparent hover:bg-black text-black  hover:text-white py-2 border border-black hover:border-transparent"
         >
           {knopTekst}
         </a>
