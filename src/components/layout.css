@@ -9,6 +9,9 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.0875rem 1.45rem;
 }
 header a {
   color: black !important;
