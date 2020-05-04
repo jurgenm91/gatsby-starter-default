@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import Menu from "../components/menu"
+import MobileMenu from "../components/mobilemenu"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <div className="header-wrap flex flex-wrap">
         <div className="w-1/2">
           <Header
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
             siteDescription={data.site.siteMetadata.description}
           />
         </div>
+        <MobileMenu />
         <div className="w-1/2 mt-8">
           <Menu />
         </div>
@@ -43,7 +45,7 @@ const Layout = ({ children }) => {
       <footer>
         © {new Date().getFullYear()}, <a href="/">Dina Tersago</a>
       </footer>
-    </>
+    </div>
   )
 }
 
