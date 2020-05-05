@@ -7,7 +7,7 @@ export default class MobileMenu extends Component {
   render() {
     return (
       <div className="mobile-menu w-full mr-4">
-        <label className="text-xl float-right cursor-pointer" for="toggle">
+        <label className="text-xl float-right cursor-pointer" htmlFor="toggle">
           &#9776;
         </label>
         <input type="checkbox" id="toggle" />
