@@ -5,7 +5,17 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import MenuKaarten from "../components/menuKaarten"
 
+import { graphql, useStaticQuery } from "gatsby"
+
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      markdownRemark {
+        html
+      }
+    }
+  `)
+  const html = data.markdownRemark.html
   return (
     <Layout>
       <SEO title="Home" />
@@ -23,7 +33,11 @@ const IndexPage = () => {
             opacity: "0.4",
           }}
         ></div>
-        <div id="home-content" className="w-1/2 flex-grow"></div>
+        <div
+          id="home-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+          className="w-1/2 flex-grow"
+        ></div>
       </div>
       <MenuKaarten />
     </Layout>
