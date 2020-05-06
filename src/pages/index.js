@@ -5,20 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import MenuKaarten from "../components/menuKaarten"
 
-import { graphql, useStaticQuery } from "gatsby"
-
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      markdownRemark {
-        html
-      }
-    }
-  `)
-  const content = data.markdownRemark.html
-  window.onload = function html() {
-    document.getElementById("home-content").innerHTML = content
-  }
   return (
     <Layout>
       <SEO title="Home" />
