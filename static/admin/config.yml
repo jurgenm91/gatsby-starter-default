@@ -18,7 +18,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
-      - name: "presentatrice"
+  - name: "presentatrice"
     label: "Presentatrice"
     folder: "content/presentatrice"
     create: true
@@ -30,7 +30,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
-      - name: "ambassadrice"
+  - name: "ambassadrice"
     label: "Ambassadrice"
     folder: "content/ambassadrice"
     create: true
@@ -42,7 +42,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
-         - name: "contact"
+  - name: "contact"
     label: "Contact"
     folder: "content/contact"
     create: true
