@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "../components/kaart.css"
+import { Link } from "gatsby"
 
 const Kaart = ({ titel, afbeelding, knopTekst, knopURL }) => {
   const getCardImage = () => {
@@ -67,12 +68,12 @@ const Kaart = ({ titel, afbeelding, knopTekst, knopURL }) => {
       <p className="titel font-bold text-center p-5 text-sm">{titel}</p>
       {getCardImage({ data, afbeelding })}
       <p className="py-5 mx-auto text-center">
-        <a
-          href="/"
+        <Link
+          to={knopURL}
           className="kaart-button text-sm font-normal bg-transparent hover:bg-black text-black  hover:text-white py-2 border border-black hover:border-transparent"
         >
           {knopTekst}
-        </a>
+        </Link>
       </p>
     </div>
   )

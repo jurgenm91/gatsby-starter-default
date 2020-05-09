@@ -9,13 +9,20 @@ export default class MenuKaarten extends Component {
           titel="Presentatrice"
           afbeelding="presentatrice"
           knopTekst="Lees meer"
+          knopURL="/presentatrice"
         />
         <Kaart
           titel="Ambassadrice"
           afbeelding="ambassadrice"
           knopTekst="Lees meer"
+          knopURL="/ambassadrice"
         />
-        <Kaart titel="Contact" afbeelding="contact" knopTekst="Lees meer" />
+        <Kaart
+          titel="Contact"
+          afbeelding="contact"
+          knopTekst="Lees meer"
+          knopURL="/contact"
+        />
       </div>
     )
   }
