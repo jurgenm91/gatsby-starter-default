@@ -2,13 +2,49 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
+media_folder: src/imgages
 public_folder: /img
 
 collections:
   - name: "home"
     label: "Voorpagina"
     folder: "content/home"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+      - name: "presentatrice"
+    label: "Presentatrice"
+    folder: "content/presentatrice"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+      - name: "ambassadrice"
+    label: "Ambassadrice"
+    folder: "content/ambassadrice"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+         - name: "contact"
+    label: "Contact"
+    folder: "content/contact"
     create: true
     slug: "{{slug}}"
     editor:

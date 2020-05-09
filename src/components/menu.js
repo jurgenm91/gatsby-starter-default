@@ -4,15 +4,15 @@ import { Link } from "gatsby"
 export let menuItems = [
   {
     linkNaam: "Presentatrice",
-    linkUrl: "/",
+    linkUrl: "/presentatrice",
   },
   {
     linkNaam: "Ambassadrice",
-    linkUrl: "/",
+    linkUrl: "/ambassadrice",
   },
   {
     linkNaam: "Contact",
-    linkUrl: "/",
+    linkUrl: "/contact",
   },
 ]
 
