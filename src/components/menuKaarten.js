@@ -4,7 +4,7 @@ import Kaart from "../components/kaart"
 export default class MenuKaarten extends Component {
   render() {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-5  gap-5 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-10  gap-5 ">
         <Kaart
           titel="Presentatrice"
           afbeelding="presentatrice"

@@ -39,7 +39,9 @@ const IndexPage = () => {
           className="w-1/2 flex-grow"
         ></div>
       </div>
-      <MenuKaarten />
+      <div className="mb-10">
+        <MenuKaarten />
+      </div>
     </Layout>
   )
 }

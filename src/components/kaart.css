@@ -21,3 +21,14 @@
   transform: translateY(-20px);
   transition: transform 0.8s;
 }
+@media only screen and (max-width: 750px) {
+  .kaart {
+    transform: none;
+    transition: none;
+  }
+
+  .kaart:hover {
+    transform: none;
+    transition: none;
+  }
+}
