@@ -32,7 +32,7 @@ const Presentatrice = () => {
           />
         </div>
 
-        <div className="w-3/4 mb-10 pl-4  ">
+        <div className="w-3/4 mb-10 pl-4 pr-4">
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
         </div>
         <div
