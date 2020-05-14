@@ -38,7 +38,12 @@ const Ambassadrice = () => {
           className="w-1/4 mb-20 "
           style={{ borderLeft: "solid 1px #dadada", paddingLeft: "20px" }}
         >
-          <p>Zijbalk</p>
+          <p>Meer info?</p>
+          <ul style={{ marginLeft: "0px" }}>
+            <li>
+              <a href="http://www.mamasforafrica.be">Mamas for Africa</a>
+            </li>
+          </ul>
         </div>
         <div className="w-full">
           <MenuKaarten />
