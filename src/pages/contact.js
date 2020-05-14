@@ -35,7 +35,7 @@ const Contact = () => {
         </div>
 
         <div className="w-3/4 mb-10 pl-4  ">
-          <form name="contact" method="POST" netlify>
+          <form name="contact" data-netlify="true">
             <p>
               <label>
                 <p>
