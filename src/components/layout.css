@@ -26,6 +26,11 @@ header h2 {
   font-family: "Quicksand", sans-serif !important;
   font-weight: 400 !important;
 }
+::placeholder {
+  color: black !important;
+  opacity: 1 !important;
+}
+
 article,
 aside,
 details,

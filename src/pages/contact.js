@@ -24,7 +24,6 @@ const Contact = () => {
     }
   `)
 
-  const html = data.markdownRemark.html
   return (
     <Layout>
       <div className="flex mb-10 flex-wrap">
@@ -34,14 +33,14 @@ const Contact = () => {
           />
         </div>
 
-        <div className="w-3/4 mb-10 pl-4  ">
+        <div className="w-3/4 mb-10 pl-4 pr-4 ">
           <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
                 <p>
                   <input
-                    className="w-full p-2 border-solid border border-gray-300 -ml-2"
+                    className="w-full p-2 border-solid border border-black"
                     type="text"
                     name="name"
                     placeholder="Wat is jouw naam?"
@@ -53,7 +52,7 @@ const Contact = () => {
               <label>
                 <p>
                   <input
-                    className="w-full p-2 border-solid border border-gray-300 -ml-2"
+                    className="w-full p-2 border-solid border border-black"
                     type="text"
                     name="voornaam"
                     placeholder="Wat is jouw voornaam?"
@@ -65,7 +64,7 @@ const Contact = () => {
               <label>
                 <p>
                   <input
-                    className="w-full p-2 border-solid border border-gray-300 -ml-2"
+                    className="w-full p-2 border-solid border border-black"
                     type="email"
                     name="email"
                     placeholder="Wat is jouw e-mailadres?"
@@ -75,7 +74,7 @@ const Contact = () => {
             </p>
             <p>
               <textarea
-                className="w-full p-2 border-solid border border-gray-300 -ml-2"
+                className="w-full p-2 border-solid border border-black"
                 rows="10"
                 name="bericht"
                 placeholder="Wat wil jij mij vertellen?"
@@ -98,14 +97,14 @@ const Contact = () => {
           <div className="w-full">
             <p>Social media:</p>
           </div>
-          <div className="w-1/4">
+          <div className="w-1/4" style={{ marginTop: "-250px" }}>
             <IconContext.Provider value={{ size: "2em" }}>
               <a href="https://www.facebook.com/dinatersagoofficial/">
                 <FaFacebookSquare />
               </a>
             </IconContext.Provider>
           </div>
-          <div className="w-1/4">
+          <div className="w-1/4" style={{ marginTop: "-250px" }}>
             <IconContext.Provider value={{ size: "2em" }}>
               <a href="https://www.instagram.com/dina_tersago/">
                 <FaInstagram />

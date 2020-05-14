@@ -30,7 +30,7 @@ const IndexPage = () => {
             filter: "blur(30px)",
             transform: "rotate(-15deg)",
             marginTop: "180px",
-            opacity: "0.4",
+            opacity: "0.5",
           }}
         ></div>
         <div

@@ -1,11 +1,36 @@
 .presentatrice {
-  box-shadow: 0px 0px 50px #ff88ba38;
+  box-shadow: 0px 0px 50px #ff88ba49;
+}
+.presentatrice-active:before {
+  content: "";
+  width: 95px;
+  position: absolute;
+  z-index: -1;
+  background-color: #ff88ba4b;
+  box-shadow: 0px 0px 50px 20px #ff88ba4b;
+  opacity: 1;
 }
 .ambassadrice {
-  box-shadow: 0px 0px 50px #6b962a60;
+  box-shadow: 0px 0px 50px #6b962a86;
+}
+.ambassadrice-active:before {
+  content: "";
+  width: 95px;
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0px 0px 50px 20px #6b962a86;
+  opacity: 0.5;
 }
 .contact {
-  box-shadow: 0px 0px 50px #97ceca79;
+  box-shadow: 0px 0px 50px #a4d6d3c7;
+}
+.contact-active:before {
+  content: "";
+  width: 95px;
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0px 0px 50px 20px #a4d6d3c7;
+  opacity: 0.7;
 }
 .kaart-button {
   padding-left: 60px;

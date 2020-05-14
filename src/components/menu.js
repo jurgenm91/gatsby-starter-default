@@ -5,14 +5,17 @@ export let menuItems = [
   {
     linkNaam: "Presentatrice",
     linkUrl: "/presentatrice",
+    activeCss: "presentatrice-active",
   },
   {
     linkNaam: "Ambassadrice",
     linkUrl: "/ambassadrice",
+    activeCss: "ambassadrice-active",
   },
   {
     linkNaam: "Contact",
     linkUrl: "/contact",
+    activeCss: "contact-active",
   },
 ]
 
@@ -23,7 +26,9 @@ export default class Menu extends Component {
         <ul className="flex flex-wrap justify-end">
           {menuItems.map(items => (
             <li key={Math.random()} className="mr-5">
-              <Link to={items.linkUrl}>{items.linkNaam}</Link>
+              <Link activeClassName={items.activeCss} to={items.linkUrl}>
+                {items.linkNaam}
+              </Link>
             </li>
           ))}
         </ul>
