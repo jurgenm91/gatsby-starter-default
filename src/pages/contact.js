@@ -36,7 +36,7 @@ const Contact = () => {
 
         <div className="w-3/4 mb-10 pl-4  ">
           <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="contact" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
                 <p>
