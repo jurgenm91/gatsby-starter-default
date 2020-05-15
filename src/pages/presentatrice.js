@@ -12,8 +12,8 @@ const Presentatrice = () => {
         frontmatter {
           image {
             childImageSharp {
-              fixed(width: 850, height: 500, quality: 90) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 850, maxHeight: 500, quality: 90) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -28,15 +28,15 @@ const Presentatrice = () => {
       <div className="flex mb-10 flex-wrap">
         <div className="w-full mb-10 text-center">
           <Img
-            fixed={data.markdownRemark.frontmatter.image.childImageSharp.fixed}
+            fluid={data.markdownRemark.frontmatter.image.childImageSharp.fluid}
           />
         </div>
 
-        <div className="w-3/4 mb-10 pl-4 pr-4">
+        <div className="w-full sm:w-3/4 mb-10 pl-4 pr-4">
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
         </div>
         <div
-          className="w-1/4 mb-20 "
+          className="w-full sm:w-1/4 mb-20 "
           style={{ borderLeft: "solid 1px #dadada", paddingLeft: "20px" }}
         >
           <p>TV-programma's:</p>
