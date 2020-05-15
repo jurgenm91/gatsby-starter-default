@@ -67,6 +67,7 @@ module.exports = {
     netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -96,6 +97,38 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon-32x32.png",
+
+        // WebApp Manifest Configuration
+        appName: null, // Inferred with your package.json
+        appDescription: null,
+        developerName: null,
+        developerURL: null,
+        dir: "auto",
+        lang: "en-US",
+        background: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        orientation: "any",
+        start_url: "/?homescreen=1",
+        version: "1.0",
+
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false,
+        },
       },
     },
 
