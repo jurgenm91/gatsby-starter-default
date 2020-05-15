@@ -34,7 +34,12 @@ const Contact = () => {
         </div>
 
         <div className="w-full sm:w-3/4 mb-10 pl-4 pr-4 ">
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
